@@ -1,0 +1,92 @@
+\documentclass{beamer}
+\usetheme{HIJ}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[babel]{csquotes}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amsmath, amsfonts, amssymb, amsthm, bbm}
+\usepackage{listings}
+%\usepackage{array}
+%\usepackage{ifthen}
+\usepackage{pgf, tikz, pgfplots}
+%\pgfplotsset{compat=1.12}
+%\usepgfplotslibrary{units, fillbetween}
+%\usetikzlibrary{spy, arrows,shapes,backgrounds, calc, fadings, decorations, automata, positioning, mindmap, shadows, decorations.pathreplacing, decorations.pathmorphing}
+%\usepackage{appendixnumberbeamer}  % \appendix
+%\usepackage{pgfpages} %needed for notes on second screen
+\usepackage{pdfpages}
+%\usepackage{multimedia}  % \movie
+\usepackage{hyperref}
+
+
+%Information to be included in the title page:
+\title{Helmholtz Institute Jena}
+\subtitle{Latex Beamer Template}
+\author{Stephan Kuschel}
+\institute{Helmholtz Institute Jena}
+\date{\today}
+
+
+
+\begin{document}
+
+
+\frame{\titlepage}
+
+
+\begin{frame}[fragile]
+\frametitle{What is this template?}
+\begin{itemize}
+\item This is an \underline{inofficial} \LaTeX-beamer template for the Helmholtz Institute Jena.
+\end{itemize}
+In case this has been downloaded from github, here is some version information: \\
+Date: \verb|$Format:%ci$| \\
+git sha: \verb|$Format:%H$| \\[1em]
+The current version can be found at:
+\url{https://github.com/hi-jena/hij-beamer-template}
+\end{frame}
+
+
+\begin{frame}{Lists and Items}
+  \begin{itemize}
+    \item item of first level
+    \begin{itemize}
+      \item item of second level
+      \begin{itemize}
+        \item item of third level
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+  \begin{enumerate}
+    \item one
+    \item two
+    \item three
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{blocks}
+\begin{block}{block}
+  blocktext
+\end{block}
+
+\begin{alertblock}{alertblock}
+  blocktext
+\end{alertblock}
+
+\begin{exampleblock}{exampleblock}
+  blocktext
+\end{exampleblock}
+
+Finally, use an exampleblock with an empty title to recreate the block from the official template:
+\begin{exampleblock}{}
+  blocktext
+\end{exampleblock}
+\end{frame}
+
+
+
+
+\end{document}

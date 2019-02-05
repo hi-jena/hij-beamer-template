@@ -1,0 +1,89 @@
+%Author: Stephan Kuschel
+%stephan.kuschel@gmail.com
+%first version: 2013-02-16
+%last change: Summer 2013 by Kuschel
+% current version information:
+% Date: $Format:%ci$
+% git sha: $Format:%H$
+
+\mode<presentation>
+
+\useinnertheme[shadow=true]{rounded}
+
+%*****Farben*****
+
+\definecolor{hijblau}{RGB}{0,99,165}
+\definecolor{hijgrau}{RGB}{165,165,165}
+\definecolor{hijorange}{RGB}{247,140,8}
+\definecolor{hijdunkelblau}{RGB}{0,66,123}
+
+
+
+%*****Outer-Theme****
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\setbeamercolor*{hiorange}{fg=black, bg=hijorange}
+\setbeamercolor*{hiblau}{fg=white, bg=hijblau}
+\setbeamercolor*{hiwhite}{fg=black, bg=white}
+\setbeamercolor*{higrau}{fg=black, bg=hijgrau}
+\setbeamercolor*{hidunkelblau}{fg=white, bg=hijdunkelblau}
+
+\setbeamercolor*{block title}{fg=black, bg=hijorange}
+\setbeamercolor*{block body}{fg=black, bg=hijorange!70}
+
+\newlength{\hibreite}
+\setlength{\hibreite}{0.22cm} % Dicke der waagerechten linien
+
+\defbeamertemplate*{footline}{hij}
+{
+ \begin{tikzpicture}
+   \fill[color=hijblau] (0,0) rectangle (.33333\paperwidth,\hibreite);
+   \fill[color=white] (0.33333\paperwidth,0) rectangle (\paperwidth,\hibreite);
+   \fill[color=hijgrau] (0.66666\paperwidth,0) rectangle (\paperwidth,\hibreite);
+   \fill[color=hijorange] (0,\hibreite) rectangle (.66666\paperwidth,2\hibreite);
+   %\fill[color=white] (0.66666\paperwidth,\hibreite) rectangle (\paperwidth,2\hibreite);
+   %\node at (0.9\paperwidth,3\hibreite) {\includegraphics[width=0.13\paperwidth]{helmholtzjena.png}};
+   \node[overlay] at (0.95\paperwidth, .5\hibreite) {\insertframenumber{} / \inserttotalframenumber{}};
+   \node[overlay] at (0.5\paperwidth, 0.5\hibreite) {\insertshortauthor{}};
+ \end{tikzpicture}
+}
+
+\defbeamertemplate*{headline}{hij}
+{
+\begin{tikzpicture}
+\fill[color=hijgrau] (0,0) rectangle (.66666\paperwidth,\hibreite);
+\fill[color=hijdunkelblau] (0.66666\paperwidth,0) rectangle (\paperwidth,\hibreite);
+\end{tikzpicture}
+  \vspace*{-1pt}
+}
+
+
+\defbeamertemplate*{frametitle}{hij}{%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=3.5ex,dp=1.5ex,left]{hiblau}%
+     \hspace{1em}\insertframetitle%
+  \end{beamercolorbox} \vskip0pt \vspace*{-1.1pt} \hspace*{-1em}%
+ \begin{tikzpicture}
+   \fill[color=hijblau] (0,0) rectangle (.33333\paperwidth,\hibreite);
+   \fill[color=hijorange] (0.33333\paperwidth,0) rectangle (1.1\paperwidth,\hibreite);
+ \end{tikzpicture}}
+
+
+
+
+\setbeamercolor{titlelike}{fg=white, bg=hijdunkelblau}
+
+
+
+%******weiteres
+
+%\setbeamerfont{block title}{size={}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode<all>
